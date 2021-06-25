@@ -1,4 +1,4 @@
-package model;
+package com.ProyectoFinal.ProyectoOrnamentacion.model;
 
 import java.util.List;
 
@@ -18,21 +18,21 @@ public class Rol {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idRol;
 
-    @Column(name = "TipoRol", length = 50)
-    private String TipoRol;
+    @Column(name = "Rol", length = 50)
+    private String Rol;
 
-    @OneToMany(mappedBy = "Rol2")
-    private List<Usuario>usuairos;
+
+ @OneToMany(mappedBy =  "Rol2")
+ private List<Usuario>usuarios;
 
 
 
     public Rol() {
     }
     
-
-    public Rol(int idRol, String tipoRol) {
+    public Rol(int idRol, String rol) {
         this.idRol = idRol;
-        TipoRol = tipoRol;
+        Rol = rol;
     }
 
     public int getIdRol() {
@@ -43,17 +43,10 @@ public class Rol {
         this.idRol = idRol;
     }
 
-    public String getTipoRol() {
-        return TipoRol;
+    public String getRol() {
+        return Rol;
     }
 
-    public void setTipoRol(String tipoRol) {
-        TipoRol = tipoRol;
-    }
-
-    
-
-
-    
-
-}
+    public void setRol(String rol) {
+        Rol = rol;
+    }}
